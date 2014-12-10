@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>56B75817-15D8-4208-8AEA-011F749844B5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SpotlightFinder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>40F1FB8D02BF9B095165D62169D4181163A1FE53</key>
+		<string>https://github.com/jcavar/SpotlightFinder.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SpotlightFinder.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>40F1FB8D02BF9B095165D62169D4181163A1FE53</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jcavar/SpotlightFinder.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>40F1FB8D02BF9B095165D62169D4181163A1FE53</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>40F1FB8D02BF9B095165D62169D4181163A1FE53</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SpotlightFinder</string>
+		</dict>
+	</array>
+</dict>
+</plist>
