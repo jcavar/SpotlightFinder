@@ -40,4 +40,6 @@
 
 @interface SPOTFinder : NSObject
 
+@property (strong, nonatomic) NSButton *buttonShowInFinder;
+
 @end

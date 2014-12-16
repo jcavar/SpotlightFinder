@@ -37,6 +37,13 @@
         [button setTarget:[self sharedInstance]];
         [button setAction:@selector(buttonShowInFinderOnClick)];
         [view addSubview:button];
+        
+        [SPOTFinder sharedInstance].buttonShowInFinder = button;
+        
+        Class workspaceTabController = NSClassFromString(@"SPAppDelegate");
+        Method buildMethod = class_getInstanceMethod(workspaceTabController, NSSelectorFromString(@"didShowPreviewItem:"));
+        Method buildReplaceMethod = class_getInstanceMethod(workspaceTabController, NSSelectorFromString(@"didShowPreviewItemReplace:"));
+        method_exchangeImplementations(buildMethod, buildReplaceMethod);
     }
 }
 
@@ -50,6 +57,25 @@
             [[NSWorkspace sharedWorkspace] selectFile:result inFileViewerRootedAtPath:@""];
         }
     }
+}
+
+@end
+
+@implementation NSObject (SPOTAdditions)
+
+- (void)didShowPreviewItemReplace:(id)arg {
+    
+    NSLog(@"SPOTFinder called show preview");
+    [SPOTFinder sharedInstance].buttonShowInFinder.hidden = YES;
+    SPAppDelegate *appDelegate = [NSApp delegate];
+    if ([[appDelegate selectedResult] respondsToSelector:@selector(filePath)]) {
+        id result = [[appDelegate selectedResult] filePath];
+        if ([result isKindOfClass:NSString.class]) {
+            NSLog(@"SPOTFinder selected path %@", result);
+            [SPOTFinder sharedInstance].buttonShowInFinder.hidden = NO;
+        }
+    }
+    [self didShowPreviewItemReplace:arg];
 }
 
 @end
